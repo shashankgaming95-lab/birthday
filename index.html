@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Final Key - Happy Birthday! 🗝️</title>
+    <title>Our Memory Lane 🗝️</title>
     <style>
+        /* General Styles */
         body {
             font-family: 'Georgia', serif;
-            background: #1c1c1c; /* Dark, luxurious background */
+            background: #1c1c1c; /* Dark Background */
             color: #f0e68c; /* Gold/Cream text */
             margin: 0;
             display: flex;
@@ -16,40 +17,79 @@
             align-items: center;
             min-height: 100vh;
             text-align: center;
-            padding: 20px;
+            padding: 20px 0;
         }
-        .container {
-            max-width: 600px;
-            padding: 40px;
+        .frame {
             border: 2px solid #f0e68c;
             box-shadow: 0 0 30px rgba(240, 230, 140, 0.5);
-            border-radius: 10px;
+            max-width: 90%;
+            width: 650px; /* Max width for desktop viewing */
+            margin: 20px;
+            padding: 30px 10px;
+            border-radius: 15px;
             animation: fadeIn 3s ease-in-out;
         }
         h1 {
-            font-size: 3em;
-            margin-bottom: 0.5em;
-            color: #ff6b81; /* A touch of romantic red */
+            font-size: 2.5em;
+            color: #ff6b81; 
+            margin-bottom: 5px;
         }
-        p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            margin-bottom: 1.5em;
-        }
-        .message-block {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 25px;
-            border-radius: 10px;
-            font-style: italic;
-            border-left: 5px solid #ff6b81;
-            white-space: pre-wrap; /* Ensures line breaks are preserved */
-            text-align: left;
-        }
-        #final-message {
-            font-family: 'Times New Roman', serif;
+        .intro-text {
             font-size: 1.1em;
-            color: #fff;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            padding: 0 15px;
         }
+
+        /* --- Carousel/Memory Lane Styles --- */
+        .carousel-container {
+            width: 100%;
+            overflow-x: scroll; /* Allows horizontal scrolling */
+            padding-bottom: 20px; /* Space for scrollbar */
+            scroll-snap-type: x mandatory; /* Snaps to each memory item */
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+        }
+        /* Hide scrollbar for Chrome, Safari, and Opera */
+        .carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .carousel {
+            display: flex;
+            padding: 10px;
+            gap: 20px; /* Space between items */
+            height: auto;
+        }
+        .memory-item {
+            flex: 0 0 200px; /* Fix width for each item */
+            scroll-snap-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            padding-bottom: 10px;
+        }
+        .memory-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 1px solid #f0e68c;
+        }
+        .caption {
+            font-size: 1em;
+            font-weight: bold;
+            color: #ff6b81;
+            margin: 10px 0 5px;
+            padding: 0 5px;
+        }
+        .date {
+            font-size: 0.85em;
+            color: #ccc;
+            padding: 0 5px;
+        }
+        
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
@@ -58,38 +98,36 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>You Cracked It! 🗝️</h1>
-        <p>After all the codes and challenges, you reached the final secret. This entire journey was a symbol of my effort and dedication to you.</p>
+    <div class="frame">
+        <h1>Our Memory Lane 🗝️</h1>
+        <p class="intro-text">A collection of big and small moments that tell our story. This journey is only beginning.</p>
 
-        <div class="message-block">
-            <p id="final-message">
-                **The Code to the Heart**
+        <div class="carousel-container">
+            <div class="carousel">
                 
-                The journey ends where all true journeys start,
-                With two keys cracked and logic played by heart.
-                The first was love, the second, memory's shine,
-                A date when our two futures intertwined.
-                
-                Though **Shawori** left us on the 128th sun,
-                And the digital pet game was undone,
-                We built a world of laughter in that short space,
-                A foundation deeper than time or place.
-                
-                You are the puzzle I adore, the beautiful blend:
-                A compass for a struggling, distant friend,
-                A mind that guides through others' darkest night,
-                Yet holds the purest, most chaotic light.
-                
-                That precious knowledge, that handling of the fray,
-                Is why I look to where you lead the way.
-                This gift, this code, this effort I have shown,
-                Is simply leading you back to your own home.
-                
-                Happy Birthday, my brilliant love. You are the only person I want to embark on our next adventure with.
-            </p>
+                <div class="memory-item">
+                    <img src="https://via.placeholder.com/200x200?text=YOUR+FIRST+DATE+PIC" alt="First Date">
+                    <div class="caption">Our first date! I knew you were special.</div>
+                    <div class="date">July 20, 2024</div>
+                </div>
+                <div class="memory-item">
+                    <img src="https://via.placeholder.com/200x200?text=SHAWORI+PIC" alt="Shawori Memory">
+                    <div class="caption">Shawori, our 128-day pet adventure!</div>
+                    <div class="date">Short Time, Big Fun</div>
+                </div>
+                <div class="memory-item">
+                    <img src="https://via.placeholder.com/200x200?text=PROPOSAL+PIC" alt="Proposal">
+                    <div class="caption">The day our futures aligned. The best "Yes."</div>
+                    <div class="date">September 04, 2025</div>
+                </div>
+                <div class="memory-item">
+                    <img src="https://via.placeholder.com/200x200?text=TODAY'S+PIC" alt="Birthday">
+                    <div class="caption">Happy Birthday! Another year with you.</div>
+                    <div class="date">January 28, 2026</div>
+                </div>
+                </div>
         </div>
-        
+
         <p style="margin-top: 25px;">(Now, close your eyes... your real-life gift is waiting.)</p>
     </div>
 
